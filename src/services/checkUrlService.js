@@ -12,6 +12,14 @@ export default {
         console.log(response)
         console.log(response.data.result)
         return response.data.result;
-    }
+    },
 
+    async fetchData(urlToFetch) {
+        var proxyUrl = 'https://cors-anywhere.herokuapp.com/'
+        var targetUrl = proxyUrl + urlToFetch
+        var response = await fetch(targetUrl)
+        var responseText = response.text()
+        console.log('fetchData ', responseText)
+        return responseText
+    }
 }

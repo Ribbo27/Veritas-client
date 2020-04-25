@@ -1,0 +1,12 @@
+.root {
+    padding: 2px 4px;
+    display: flex;
+    align-items: center;
+    border-radius: 40px !important;
+    width: 50%;
+  }
+
+.input {
+    padding-left: 20px;
+    flex: 1;
+  }

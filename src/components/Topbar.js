@@ -8,9 +8,7 @@ class Topbar extends Component {
     render() {
         return (
             <div className="Topbar">
-                <row >
-                    <Logo />
-                </row>
+                <Logo />
             </div>
         )
     }

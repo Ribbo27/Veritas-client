@@ -3,8 +3,8 @@ import Paper from '@material-ui/core/Paper';
 import InputBase from '@material-ui/core/InputBase';
 import IconButton from '@material-ui/core/IconButton';
 import SearchIcon from '@material-ui/icons/Search';
-import httpService from '../services/checkUrlService'
 import Prediction from './PredResult'
+import httpService from '../services/checkUrlService'
 import isUrl from '../utils/utility'
 import '../styles/searchBar.css';
 
@@ -89,10 +89,37 @@ class SearchBar extends Component {
             <SearchIcon />
           </IconButton>
         </Paper>
-        <Prediction error={this.state.error} title={this.state.current_title} prob={this.state.probability} class={this.state.class} />
+        <Prediction /*predictionResult={this.state.prediction} */ hasError={this.state.error} title={this.state.current_title} prob={this.state.probability} class={this.state.class} />
       </React.Fragment>
     )
   }
 }
 
 export default SearchBar;
+
+
+
+
+
+/**
+ *
+ *
+ * this.props.setResult({
+              prediction: {
+                results: {
+                  probability: "80",
+                  class: "REAL"
+                },
+                hasError: false
+              }
+            });
+
+
+
+            this.props.setResult({
+              prediction: {
+                results: null,
+                hasError: true
+              }
+            });
+ */

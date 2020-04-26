@@ -8,7 +8,7 @@ const useStyles = makeStyles((theme) => ({
         position: "absolute",
         left: 20,
         bottom: 20,
-        right: 0,
+        right: 20,
         backgroundColor: "#282c34",
         color: "#c7c7c7",
         fontFamily: "Open Sans"
@@ -35,11 +35,11 @@ export default function FootBar() {
     const classes = useStyles();
     return (
         <div className={classes.root}>
-            <Grid container spacing={3} style={{ width: "100%" }}>
-                <Grid className={classes.gridleft} item xs={12} sm={6}>
+            <Grid container spacing={1}>
+                <Grid className={classes.gridleft} item xs={6} sm={6}>
                     <Paper className={classes.paper} elevation={0} >#EUvsVirus</Paper>
                 </Grid>
-                <Grid className={classes.gridright} item xs={12} sm={6}>
+                <Grid className={classes.gridright} item xs={6} sm={6}>
                     <Paper className={classes.paper} elevation={0} >@U4U_Milan Team</Paper>
                 </Grid>
             </Grid>

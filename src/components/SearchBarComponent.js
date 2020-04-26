@@ -50,12 +50,9 @@ class SearchBar extends Component {
           // Display the result
         }).then((response) => {
           if (response) {
-            /*this.setState({ current_title: response.analyseData })
-            this.setState({ probability: response.probability })
-            this.setState({ class: response.class })*/
             this.setState({ current_title: response.analyseData })
-            this.setState({ probability: "80" })
-            this.setState({ class: "REAL" })
+            this.setState({ probability: response.probability })
+            this.setState({ class: response.class })
             this.setState({ error: false })
           } else {
             this.setState({ error: true })
